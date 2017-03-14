@@ -5,6 +5,8 @@ px2rpx
 
 
 
+![效果图](px2rpx.gif)
+
 ## 安装
 
 1. 下载本项目, git clone https://github.com/wweggplant/px2rpx.git
@@ -36,4 +38,5 @@ px2rpx
 * `rpx_standard_length` - rpx官方规定屏幕宽
 * `available_file_types` - 启用此插件的文件类型,默认`.wxss`
 
->代码参考了 [https://github.com/flashlizi/cssrem](https://github.com/flashlizi/cssrem)。在此感谢原作者。
+>代码参考了 [https://github.com/flashlizi/cssrem](https://github.com/flashlizi/cssrem)。在此感谢原作者。效果图
+[px2rpx.gif]: 
