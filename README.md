@@ -1,23 +1,38 @@
-CSSREM
+px2rpx
 -------------
 
-一个CSS的px值转rem值的Sublime Text 3自动完成插件。
+    参考了 [https://github.com/flashlizi/cssrem](https://github.com/flashlizi/cssrem),对其中的源码进行的修改。在此感谢原作者。
 
-插件效果如下：
+一个px值转rpx值的sublime text自动完成插件
 
-![效果演示图](cssrem.gif)
+## 安装
 
-##### 安装
+1. 下载本项目, git clone https://github.com/wweggplant/px2rpx.git
+2. 进入packages目录：Sublime Text -> Preferences -> Browse Packages....
+3. 复制下载的px2rpx目录到刚才的packges目录里。
+4. 重启Sublime Text。
 
-* 下载本项目，比如：git clone https://github.com/flashlizi/cssrem
-* 进入packages目录：Sublime Text -> Preferences -> Browse Packages...
-* 复制下载的cssrem目录到刚才的packges目录里。
-* 重启Sublime Text。
+## 配置
 
-##### 配置参数
+配置文件: Sublime Text -> Preferences -> Package Settings -> px2rpx
 
-参数配置文件：Sublime Text -> Preferences -> Package Settings -> cssrem
 
-* `px_to_rem` - px转rem的单位比例，默认为40。
-* `max_rem_fraction_length` - px转rem的小数部分的最大长度。默认为6。
-* `available_file_types` - 启用此插件的文件类型。默认为：[".css", ".less", ".sass"]。
+* `devices` - 设备信息列表
+
+```json
+"devices": 
+[
+    {
+        "name" :"iphone4/5", //设备名称
+        "info":{
+            "width": 320 //设备宽度
+        }
+    }...
+]
+```
+
+
+* `max_rpx_fraction_length` - 小数部分的最大长度。默认为2。
+* `rpx_standard_length` - rpx官方规定屏幕宽
+* `available_file_types` - 启用此插件的文件类型,默认`.wxss`
+
