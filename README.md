@@ -1,9 +1,9 @@
 px2rpx
 -------------
 
-    参考了 [https://github.com/flashlizi/cssrem](https://github.com/flashlizi/cssrem),对其中的源码进行的修改。在此感谢原作者。
+一个用于在开发小程序时px值转rpx值的sublime text自动完成插件。rpx的知识请参考 [这里](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxss.html)
 
-一个px值转rpx值的sublime text自动完成插件
+
 
 ## 安装
 
@@ -36,3 +36,4 @@ px2rpx
 * `rpx_standard_length` - rpx官方规定屏幕宽
 * `available_file_types` - 启用此插件的文件类型,默认`.wxss`
 
+>代码参考了 [https://github.com/flashlizi/cssrem](https://github.com/flashlizi/cssrem)。在此感谢原作者。
