@@ -17,6 +17,18 @@
             "info": {
                 "width": 414
             }
+        },
+        {
+            "name" :"galaxyS5",
+            "info": {
+                "width": 384
+            }
+        },
+        {
+            "name" :"galaxyNote2",
+            "info": {
+                "width": 360
+            }
         }
     ],
     "max_rpx_fraction_length": 2,
