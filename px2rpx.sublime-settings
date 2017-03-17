@@ -1,4 +1,39 @@
 {
+    /*
+        由于数组类型配置会被覆盖，默认配置硬编码在了源码中，可以在User中配置新的设备，程序会进行混合
+
+    "devices": [
+        {
+            "name" :"iphone4/5",
+            "info":{
+                "width": 320
+                }
+            },
+        {
+            "name" :"iphone6",
+            "info": {
+                "width": 375
+            }
+        },
+        {
+            "name" :"iphone6plus",
+            "info": {
+                "width": 414
+            }
+        },
+        {
+            "name" :"galaxyS5",
+            "info": {
+                "width": 384
+            }
+        },
+        {
+            "name" :"galaxyNote2",
+            "info": {
+                "width": 360
+            }
+        }
+    ],*/
     "max_rpx_fraction_length": 2,
     "rpx_standard_length": 750,
     "available_file_types": [".wxss"]
