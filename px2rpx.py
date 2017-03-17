@@ -4,21 +4,55 @@ import re
 import time
 import os
 
-SETTINGS = {}
+SETTINGS = {
+    "_devices": [
+        {
+            "name" :"iphone4/5",
+            "info":{
+                "width": 320
+                }
+            },
+        {
+            "name" :"iphone6",
+            "info": {
+                "width": 375
+            }
+        },
+        {
+            "name" :"iphone6plus",
+            "info": {
+                "width": 414
+            }
+        },
+        {
+            "name" :"galaxyS5",
+            "info": {
+                "width": 384
+            }
+        },
+        {
+            "name" :"galaxyNote2",
+            "info": {
+                "width": 360
+            }
+        }
+    ]
+}
 lastCompletion = {"needFix": False, "value": None, "region": None}
 
 def plugin_loaded():
     init_settings()
 
 def init_settings():
-    get_settings()
+    print(SETTINGS);
+    get_settings();
     sublime.load_settings('px2rpx.sublime-settings').add_on_change('get_settings', get_settings)
 
 def get_settings():
     settings = sublime.load_settings('px2rpx.sublime-settings')
     SETTINGS['max_rpx_fraction_length'] = settings.get('max_rpx_fraction_length', 6)
     SETTINGS['available_file_types'] = settings.get('available_file_types', ['.wxss'])
-    SETTINGS['devices'] = settings.get('devices', [])
+    SETTINGS['devices'] = SETTINGS['_devices'] + settings.get('devices')
     SETTINGS['rpx_standard_length'] = settings.get('rpx_standard_length', 750)
 
 def get_setting(view, key):
