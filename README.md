@@ -27,7 +27,7 @@ px2rpx
     {
         "name" :"iphone4/4s", //设备名称
         "info":{
-            "dpr":1,//设备dp2
+            "dpr":1,//设备dpr
             "width": 320 //设备宽度
         }
     }...
