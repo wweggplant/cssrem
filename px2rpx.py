@@ -7,32 +7,44 @@ import os
 SETTINGS = {
     "_devices": [
         {
-            "name" :"iphone4/5",
+            "name" :"iphone4/4s",
             "info":{
+                "dpr": 1,
                 "width": 320
                 }
             },
         {
+            "name" :"iphone5/5s",
+            "info":{
+                "dpr": 2,
+                "width": 320
+                }
+        },
+        {
             "name" :"iphone6",
             "info": {
+                "dpr": 2,
                 "width": 375
             }
         },
         {
             "name" :"iphone6plus",
             "info": {
+                "dpr": 3,
                 "width": 414
             }
         },
         {
             "name" :"galaxyS5",
             "info": {
+                "dpr": 3,
                 "width": 384
             }
         },
         {
             "name" :"galaxyNote2",
             "info": {
+                "dpr": 2,
                 "width": 360
             }
         }
@@ -101,7 +113,12 @@ class Px2RpxCommand(sublime_plugin.EventListener):
             for device in devices:
                 obj = device['info']
                 name = device['name']
-                rpxValue = round( standardLength * float(value)  / obj['width'], get_setting(view, 'max_rpx_fraction_length'))
+                dpr = 1
+                for index, obj_item in obj.items():
+                    # dpr = device_info['dpr']
+                    if index == 'dpr':
+                        dpr = obj_item
+                rpxValue = round( standardLength * float(value)  / obj['width'] / dpr, get_setting(view, 'max_rpx_fraction_length'))
                 # save them for replace fix
                 lastCompletion["value"] = str(rpxValue) + 'rpx'
                 lastCompletion["region"] = sublime.Region(start, location)

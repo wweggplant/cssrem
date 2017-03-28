@@ -25,15 +25,16 @@ px2rpx
 "devices": 
 [
     {
-        "name" :"iphone4/5", //设备名称
+        "name" :"iphone4/4s", //设备名称
         "info":{
+            "dpr":1,//设备dp2
             "width": 320 //设备宽度
         }
     }...
 ]
 ```
 
->ps：User中的px2rpx.sublime-settings文件由于会覆盖默认配置文件px2rpx.sublime-setting中的数组项目，所以吧几个常见的设备信息硬编码在程序中。
+>ps：User中的px2rpx.sublime-settings文件由于会覆盖默认配置文件px2rpx.sublime-setting中的数组项目，所以把几个常见的设备信息硬编码在程序中。
 
 * `max_rpx_fraction_length` - 小数部分的最大长度。默认为2。
 * `rpx_standard_length` - rpx官方规定屏幕宽
