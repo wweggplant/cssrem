@@ -56,15 +56,14 @@ def plugin_loaded():
     init_settings()
 
 def init_settings():
-    print(SETTINGS);
-    get_settings();
+    get_settings()
     sublime.load_settings('px2rpx.sublime-settings').add_on_change('get_settings', get_settings)
 
 def get_settings():
     settings = sublime.load_settings('px2rpx.sublime-settings')
     SETTINGS['max_rpx_fraction_length'] = settings.get('max_rpx_fraction_length', 6)
     SETTINGS['available_file_types'] = settings.get('available_file_types', ['.wxss'])
-    SETTINGS['devices'] = SETTINGS['_devices'] + settings.get('devices')
+    SETTINGS['devices'] = SETTINGS['_devices'] + settings.get('devices',[])
     SETTINGS['rpx_standard_length'] = settings.get('rpx_standard_length', 750)
 
 def get_setting(view, key):
